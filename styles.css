@@ -121,7 +121,7 @@ main {
 
 .eyebrow::before {
   content: "";
-  width: 46px;
+  width: 34px;
   height: 2.5px;
   background: var(--azure);
 }
