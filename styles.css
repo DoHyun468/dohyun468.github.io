@@ -346,30 +346,125 @@ p {
   max-width: 24ch;
 }
 
-/* ---------- focus ---------- */
+/* ---------- projects ---------- */
 
-.focus-grid {
+.project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 34px);
+  gap: clamp(16px, 2.5vw, 26px);
 }
 
-.focus-grid article {
-  border-top: 1.5px solid var(--ink);
-  padding-top: 18px;
+.proj {
+  position: relative;
+  border: 1px solid var(--line);
+  background: #fff;
+  overflow: hidden;
+  cursor: default;
 }
 
-.one-liner {
-  margin-bottom: 14px;
-  color: var(--azure);
+.proj-art {
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, var(--azure-soft) 1px, transparent 1px),
+    linear-gradient(0deg, var(--azure-soft) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.proj-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.art-ink {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+}
+
+.art-azure {
+  fill: var(--azure-soft);
+  stroke: var(--azure);
+  stroke-width: 1.3;
+}
+
+.art-azure-s {
+  fill: none;
+  stroke: var(--azure);
+  stroke-width: 1.6;
+}
+
+.art-ray {
+  fill: none;
+  stroke: var(--azure);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 4;
+}
+
+.art-laser {
+  stroke: var(--laser);
+  stroke-width: 1.2;
+}
+
+.art-laser-o {
+  fill: none;
+  stroke: var(--laser);
+  stroke-width: 1.3;
+}
+
+.proj-body {
+  padding: 18px 20px 20px;
+}
+
+.proj-body h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.proj-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.proj-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 22px;
+  background: rgba(43, 93, 168, 0.94);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.proj:hover .proj-overlay,
+.proj:focus-visible .proj-overlay {
+  opacity: 1;
+}
+
+.ov-when {
   font-family: var(--mono);
   font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
 }
 
-.focus-grid p:not(.one-liner) {
-  color: var(--muted);
-  font-size: 15.5px;
-  margin-bottom: 0;
+.ov-where {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.ov-role {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  opacity: 0.85;
 }
 
 /* ---------- experience ---------- */
@@ -583,8 +678,8 @@ p {
     max-width: 480px;
   }
 
-  .focus-grid {
-    grid-template-columns: 1fr;
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .edu-grid,
@@ -603,7 +698,8 @@ p {
     justify-content: flex-start;
   }
 
-  .contact-grid {
+  .contact-grid,
+  .project-grid {
     grid-template-columns: 1fr;
   }
 

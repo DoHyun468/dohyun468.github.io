@@ -23,7 +23,7 @@
     <header class="site-header">
       <nav aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#focus">Focus</a>
+        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#publications">Publications</a>
         <a href="#education">Education</a>
@@ -130,36 +130,123 @@
         </div>
       </section>
 
-      <!-- FOCUS -->
-      <section id="focus" class="section">
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
         <p class="eyebrow">— 01</p>
-        <h2>Focus</h2>
-        <div class="focus-grid">
-          <article>
-            <h3>Camera geometry</h3>
-            <p class="one-liner">how pixels become coordinates</p>
-            <p>
-              Calibration, stereo matching, multi-view geometry, LiDAR.
-              The quiet math that decides whether a measurement can be trusted.
-            </p>
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+          <article class="proj" tabindex="0">
+            <div class="proj-art" aria-hidden="true">
+              <svg viewBox="0 0 220 130">
+                <rect class="art-ink" x="70" y="26" width="86" height="48"/>
+                <line class="art-ray" x1="40" y1="108" x2="94" y2="74"/>
+                <line class="art-ray" x1="180" y1="108" x2="132" y2="74"/>
+                <rect class="art-ink" x="26" y="106" width="26" height="16" rx="2"/>
+                <rect class="art-ink" x="168" y="106" width="26" height="16" rx="2"/>
+                <line class="art-laser" x1="70" y1="90" x2="156" y2="90"/>
+                <line class="art-laser" x1="70" y1="85" x2="70" y2="95"/>
+                <line class="art-laser" x1="156" y1="85" x2="156" y2="95"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <h3>Ship-block stereo measurement</h3>
+              <p>High-precision stereo measurement of ship-scale structures — calibration, preprocessing, and correspondence detection. Published at SPIE and KSPE.</p>
+            </div>
+            <div class="proj-overlay">
+              <span class="ov-when">2022 — 2023</span>
+              <span class="ov-where">HUMAN Laboratory, KAIST</span>
+              <span class="ov-role">stereo vision · calibration</span>
+            </div>
           </article>
-          <article>
-            <h3>Neural scenes</h3>
-            <p class="one-liner">how photos become places</p>
-            <p>
-              3D Gaussian Splatting and NeRF — reconstruction quality for
-              real-world captures: artifacts, backgrounds, regularization,
-              and what breaks when the input is imperfect.
-            </p>
+
+          <article class="proj" tabindex="0">
+            <div class="proj-art" aria-hidden="true">
+              <svg viewBox="0 0 220 130">
+                <rect class="art-ink" x="60" y="58" width="74" height="34" rx="4"/>
+                <circle class="art-ink" cx="76" cy="98" r="10"/>
+                <circle class="art-ink" cx="118" cy="98" r="10"/>
+                <path class="art-ink" d="M 134 62 L 162 44 L 174 58"/>
+                <circle class="art-azure" cx="182" cy="92" r="9"/>
+                <circle class="art-azure" cx="160" cy="102" r="9"/>
+                <circle class="art-laser-o" cx="196" cy="112" r="9"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <h3>Ball-collecting robot</h3>
+              <p>A team robot that finds blue balls with RGB-D vision and drops them into a rimmed basket. I designed the chassis, gearbox and suspension, and the continuous pick-up / push-up drop-off mechanisms.</p>
+            </div>
+            <div class="proj-overlay">
+              <span class="ov-when">Undergraduate team project</span>
+              <span class="ov-where">KAIST Mechanical Engineering</span>
+              <span class="ov-role">mechanical design · SOLIDWORKS · 3D printing</span>
+            </div>
           </article>
-          <article>
-            <h3>AI agents</h3>
-            <p class="one-liner">how models become coworkers</p>
-            <p>
-              Agent harnesses and tool-use workflows — systems where a model
-              understands what you're working on and helps you take the next step.
-            </p>
+
+          <article class="proj" tabindex="0">
+            <div class="proj-art" aria-hidden="true">
+              <svg viewBox="0 0 220 130">
+                <rect class="art-ink" x="66" y="30" width="88" height="56" rx="6"/>
+                <path class="art-azure-s" d="M 96 86 C 104 98, 116 94, 122 106 C 126 114, 118 120, 112 118"/>
+                <path class="art-ray" d="M 82 70 q 8 8 0 16"/>
+                <path class="art-ray" d="M 74 66 q 14 12 0 24"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <h3>Automatic tissue dispenser</h3>
+              <p>Built end-to-end by myself — sensing, motor actuation, mechanism, and material selection so thin, tear-prone tissue feeds out reliably.</p>
+            </div>
+            <div class="proj-overlay">
+              <span class="ov-when">Engineering Design course</span>
+              <span class="ov-where">KAIST Mechanical Engineering</span>
+              <span class="ov-role">solo · sensor-to-motor closed loop</span>
+            </div>
           </article>
+
+          <article class="proj" tabindex="0">
+            <div class="proj-art" aria-hidden="true">
+              <svg viewBox="0 0 220 130">
+                <ellipse class="art-azure" cx="96" cy="64" rx="22" ry="12" transform="rotate(-18 96 64)"/>
+                <ellipse class="art-azure" cx="134" cy="46" rx="14" ry="8" transform="rotate(20 134 46)"/>
+                <ellipse class="art-azure" cx="70" cy="42" rx="11" ry="7" transform="rotate(-38 70 42)"/>
+                <ellipse class="art-azure" cx="146" cy="80" rx="11" ry="6" transform="rotate(28 146 80)"/>
+                <ellipse class="art-azure" cx="112" cy="94" rx="9" ry="6" transform="rotate(8 112 94)"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <h3>3D Gaussian Splatting R&amp;D</h3>
+              <p>Reconstruction quality for a production 3D capture service — artifact and floater suppression, background modeling, and rendering optimization.</p>
+            </div>
+            <div class="proj-overlay">
+              <span class="ov-when">2024 — 2025</span>
+              <span class="ov-where">Recon Labs, Seoul</span>
+              <span class="ov-role">neural 3D reconstruction</span>
+            </div>
+          </article>
+
+          <article class="proj" tabindex="0">
+            <div class="proj-art" aria-hidden="true">
+              <svg viewBox="0 0 220 130">
+                <circle class="art-ink" cx="56" cy="44" r="12"/>
+                <circle class="art-ink" cx="128" cy="34" r="12"/>
+                <circle class="art-ink" cx="100" cy="92" r="12"/>
+                <circle class="art-azure" cx="168" cy="84" r="12"/>
+                <line class="art-ray" x1="66" y1="50" x2="92" y2="84"/>
+                <line class="art-ray" x1="126" y1="46" x2="104" y2="82"/>
+                <line class="art-ray" x1="112" y1="90" x2="156" y2="86"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <h3>Agent harness for a creative canvas</h3>
+              <p>An in-canvas AI agent that tracks what the user is making on a graph-based canvas and recommends the next step across multiple generative models.</p>
+            </div>
+            <div class="proj-overlay">
+              <span class="ov-when">2025 — 2026</span>
+              <span class="ov-where">Recon Labs, Seoul</span>
+              <span class="ov-role">agent &amp; orchestration harness</span>
+            </div>
+          </article>
+
         </div>
       </section>
 
