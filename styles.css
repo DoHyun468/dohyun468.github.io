@@ -447,13 +447,14 @@ p {
 
 .badge {
   display: inline-block;
-  margin: 0 0 18px;
-  padding: 8px 18px;
+  margin: 0 0 16px;
+  padding: 4px 14px;
   background: var(--ink);
   color: #fff;
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
+  line-height: 1.6;
 }
 
 .badge {
@@ -542,25 +543,6 @@ p {
   font-size: 14px;
 }
 
-/* ---------- education ---------- */
-
-.edu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 34px);
-}
-
-.edu-grid article {
-  border: 1px solid var(--line);
-  padding: 26px;
-}
-
-.edu-grid p:last-child {
-  color: var(--muted);
-  font-size: 15.5px;
-  margin-bottom: 0;
-}
-
 /* ---------- contact ---------- */
 
 .contact-list h3 {
@@ -632,9 +614,6 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .edu-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 
   .ruler {
     grid-template-columns: repeat(2, minmax(0, 1fr));
