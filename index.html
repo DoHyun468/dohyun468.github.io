@@ -6,241 +6,269 @@
     <title>Dohyun Kim</title>
     <meta
       name="description"
-      content="Dohyun Kim, KAIST ME and EE, building spatial intelligence across 3D vision, neural reconstruction, robot perception, and Physical AI."
+      content="Dohyun Kim — 3D perception and AI research in Seoul. Camera geometry, neural scene representation, and AI agents."
     >
     <meta property="og:title" content="Dohyun Kim">
-    <meta property="og:description" content="Spatial intelligence, 3D vision, robot perception, and Physical AI.">
+    <meta property="og:description" content="3D perception · AI research — Seoul">
     <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#about">Dohyun Kim</a>
       <nav aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#map">Career Map</a>
+        <a href="#focus">Focus</a>
         <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
+      <!-- ABOUT -->
       <section id="about" class="section hero">
-        <div class="section-number">00</div>
-        <div class="hero-copy">
-          <p class="kicker">KAIST ME + EE · Recon Labs · Seoul</p>
-          <h1>Spatial intelligence for robots that understand real-world geometry.</h1>
-          <p class="lead">
-            I work at the intersection of calibrated sensors, 3D reconstruction,
-            neural scene representations, and agentic workflows. My current direction
-            is robotics perception, robot guidance, and Physical AI.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="assets/DohyunKim-CV-2026-07-13-ai-researcher.pdf">Curriculum Vitae</a>
-            <a class="button" href="https://www.linkedin.com/in/dohyun-kim-950bb429b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <p class="eyebrow">— Dohyun Kim · Seoul</p>
+        <h1>About me</h1>
+        <div class="hero-columns">
+          <div class="hero-copy">
+            <p class="thesis"><strong>I like turning cameras into measuring instruments.</strong></p>
+            <p>
+              I'm an engineer and researcher working on
+              <strong>3D perception</strong> and <strong>AI research</strong>.
+              I studied mechanical and electrical engineering at KAIST, where I
+              measured ship-scale structures with calibrated stereo cameras.
+              These days at Recon Labs I rebuild real scenes as neural
+              representations and build AI agents that help people create.
+            </p>
+            <p>
+              What connects all of it: taking a picture, and ending up with
+              something you can trust about the world — a coordinate, a shape,
+              a decision.
+            </p>
+            <p class="cv-line">
+              <a class="cv-link" href="assets/DohyunKim-CV.pdf">[ Curriculum Vitae ]</a>
+              <a class="plain-link" href="https://github.com/DoHyun468" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="plain-link" href="https://www.linkedin.com/in/dohyun-kim-950bb429b/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </p>
           </div>
+          <figure class="hero-visual" aria-label="Stereo geometry sketch">
+            <svg viewBox="0 0 440 330" role="img" aria-hidden="true">
+              <!-- calibration checkerboard, floating -->
+              <g class="sk board">
+                <rect x="46" y="44" width="26" height="26"/>
+                <rect x="98" y="44" width="26" height="26"/>
+                <rect x="72" y="70" width="26" height="26"/>
+                <rect x="124" y="70" width="26" height="26"/>
+                <rect x="46" y="96" width="26" height="26"/>
+                <rect x="98" y="96" width="26" height="26"/>
+                <rect x="72" y="122" width="26" height="26"/>
+                <rect x="124" y="122" width="26" height="26"/>
+                <rect class="frame" x="46" y="44" width="104" height="104"/>
+              </g>
+              <!-- two cameras: body + lens -->
+              <g class="sk cam">
+                <rect x="76" y="284" width="44" height="28" rx="3"/>
+                <circle cx="98" cy="277" r="8"/>
+                <rect x="320" y="284" width="44" height="28" rx="3"/>
+                <circle cx="342" cy="277" r="8"/>
+              </g>
+              <!-- rays to a point -->
+              <g class="sk ray">
+                <line x1="98" y1="269" x2="252" y2="118"/>
+                <line x1="342" y1="269" x2="252" y2="118"/>
+              </g>
+              <!-- reconstructed gaussians -->
+              <g class="gauss">
+                <ellipse cx="252" cy="118" rx="14" ry="8" transform="rotate(-24 252 118)"/>
+                <ellipse cx="286" cy="96" rx="10" ry="5" transform="rotate(14 286 96)"/>
+                <ellipse cx="226" cy="88" rx="8" ry="5" transform="rotate(-40 226 88)"/>
+                <ellipse cx="300" cy="132" rx="7" ry="4" transform="rotate(30 300 132)"/>
+                <ellipse cx="212" cy="140" rx="6" ry="4" transform="rotate(10 212 140)"/>
+              </g>
+              <!-- measurement tick -->
+              <g class="measure">
+                <line x1="200" y1="180" x2="330" y2="180"/>
+                <line x1="200" y1="174" x2="200" y2="186"/>
+                <line x1="330" y1="174" x2="330" y2="186"/>
+                <text x="252" y="198">d = ?</text>
+              </g>
+            </svg>
+            <figcaption>two views, one world</figcaption>
+          </figure>
         </div>
-        <div class="hero-visual" aria-label="Interactive spatial intelligence visual">
-          <canvas id="spatialCanvas" width="840" height="640"></canvas>
-          <div class="visual-caption">
-            <span>camera</span>
-            <span>geometry</span>
-            <span>robot frame</span>
+
+        <!-- signature: ruler timeline -->
+        <div class="ruler" role="list" aria-label="Timeline">
+          <div class="ruler-line" aria-hidden="true"></div>
+          <div class="stop" role="listitem">
+            <span class="tick" aria-hidden="true"></span>
+            <span class="year">2015</span>
+            <span class="what">KAIST — mechanical&nbsp;+ electrical engineering</span>
           </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="section-number">01</div>
-        <div class="section-body">
-          <div class="section-heading">
-            <p class="kicker">Projects</p>
-            <h2>Selected work and active builds</h2>
+          <div class="stop" role="listitem">
+            <span class="tick" aria-hidden="true"></span>
+            <span class="year">2022</span>
+            <span class="what">HUMAN Lab — stereo 3D measurement</span>
           </div>
-          <div class="filters" aria-label="Project filters">
-            <button type="button" class="filter active" data-filter="all">All</button>
-            <button type="button" class="filter" data-filter="3d">3D Vision</button>
-            <button type="button" class="filter" data-filter="robotics">Robotics</button>
-            <button type="button" class="filter" data-filter="ai">AI</button>
-            <button type="button" class="filter" data-filter="study">Study</button>
+          <div class="stop" role="listitem">
+            <span class="tick" aria-hidden="true"></span>
+            <span class="year">2024</span>
+            <span class="what">Recon Labs — neural 3D &amp; agents</span>
           </div>
-          <div class="project-grid">
-            <article class="project-card featured" data-tags="robotics 3d">
-              <div class="project-media robot-guidance-media" aria-hidden="true">
-                <span class="arm-base"></span>
-                <span class="arm-link one"></span>
-                <span class="arm-link two"></span>
-                <span class="target-cube"></span>
-              </div>
-              <div class="project-content">
-                <p class="project-meta">Active Build · Robotics</p>
-                <h3>Manipulator + Camera Robot Guidance Demo</h3>
-                <p>
-                  A planned public demo connecting camera calibration, object pose estimation,
-                  camera-to-robot frame transforms, and scripted manipulator motion.
-                </p>
-                <ul>
-                  <li>Goal: turn image-space perception into action-ready robot coordinates.</li>
-                  <li>Scope: intrinsic calibration, marker or object pose, robot-frame transform, approach motion.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="project-card" data-tags="3d">
-              <div class="project-media neural-media" aria-hidden="true"></div>
-              <div class="project-content">
-                <p class="project-meta">Recon Labs · 3D</p>
-                <h3>Neural 3D Representation Workflows</h3>
-                <p>
-                  Work around 3D graphics, real-world capture, NeRF, Gaussian Splatting,
-                  and reconstruction quality in production-oriented 3D systems.
-                </p>
-              </div>
-            </article>
-
-            <article class="project-card" data-tags="ai">
-              <div class="project-media agent-media" aria-hidden="true"></div>
-              <div class="project-content">
-                <p class="project-meta">Current Exploration · AI</p>
-                <h3>Agentic Engineering Workflows</h3>
-                <p>
-                  Exploration of AI agents, tool-use workflows, and model-assisted automation
-                  for research and applied engineering processes.
-                </p>
-              </div>
-            </article>
-
-            <article class="project-card" data-tags="3d study">
-              <div class="project-media support-media" aria-hidden="true"></div>
-              <div class="project-content">
-                <p class="project-meta">Supporting Study · 3D Vision</p>
-                <h3>Small Few-shot 3D Reconstruction Study</h3>
-                <p>
-                  A compact supporting study around limited-observation spatial understanding,
-                  kept as context for my broader 3D vision interests.
-                </p>
-              </div>
-            </article>
+          <div class="stop now" role="listitem">
+            <span class="tick" aria-hidden="true"></span>
+            <span class="year">now</span>
+            <span class="what">curious where seeing meets acting</span>
           </div>
         </div>
       </section>
 
-      <section id="map" class="section">
-        <div class="section-number">02</div>
-        <div class="section-body">
-          <div class="section-heading">
-            <p class="kicker">Career Map</p>
-            <h2>How my work connects</h2>
-          </div>
-          <div class="map">
-            <article>
-              <span>01</span>
-              <h3>Sensor Geometry</h3>
-              <p>stereo matching, LiDAR, camera calibration, multi-view geometry</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Neural 3D</h3>
-              <p>NeRF, Gaussian Splatting, capture constraints, scene representation</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Robot Perception</h3>
-              <p>pose estimation, RGB-D, point clouds, robot-frame spatial reasoning</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Physical AI</h3>
-              <p>robot learning data, VLA interest, action-ready spatial representations</p>
-            </article>
-          </div>
+      <!-- FOCUS -->
+      <section id="focus" class="section">
+        <p class="eyebrow">— focus</p>
+        <h2>Three things I keep coming back to</h2>
+        <div class="focus-grid">
+          <article>
+            <h3>Camera geometry</h3>
+            <p class="one-liner">how pixels become coordinates</p>
+            <p>
+              Calibration, stereo matching, multi-view geometry, LiDAR.
+              The quiet math that decides whether a measurement can be trusted.
+            </p>
+          </article>
+          <article>
+            <h3>Neural scenes</h3>
+            <p class="one-liner">how photos become places</p>
+            <p>
+              3D Gaussian Splatting and NeRF — reconstruction quality for
+              real-world captures: artifacts, backgrounds, regularization,
+              and what breaks when the input is imperfect.
+            </p>
+          </article>
+          <article>
+            <h3>AI agents</h3>
+            <p class="one-liner">how models become coworkers</p>
+            <p>
+              Agent harnesses and tool-use workflows — systems where a model
+              understands what you're working on and helps you take the next step.
+            </p>
+          </article>
         </div>
       </section>
 
+      <!-- EXPERIENCE -->
       <section id="experience" class="section">
-        <div class="section-number">03</div>
-        <div class="section-body">
-          <div class="section-heading">
-            <p class="kicker">Experience</p>
-            <h2>Work and research</h2>
-          </div>
-          <div class="timeline">
-            <article>
-              <p class="date">Mar. 2024 - Present</p>
-              <h3>Recon Labs</h3>
-              <p class="role">AI Researcher · Seoul, Korea</p>
+        <p class="eyebrow">— experience</p>
+        <h2>Work and research</h2>
+        <div class="timeline">
+          <article>
+            <p class="date">Mar 2024 — present</p>
+            <div>
+              <h3>Recon Labs <span class="role">AI Researcher · Seoul</span></h3>
               <ul>
-                <li>Worked around 3D graphics and reconstruction workflows involving neural scene representations.</li>
-                <li>Built practical understanding of real-world capture, reconstruction quality, and spatial representation constraints.</li>
-                <li>Exploring AI agents and tool-use workflows for applied engineering processes.</li>
+                <li>Researched 3D Gaussian Splatting for a production 3D capture service — reconstruction quality for real-world captures, artifact and floater suppression, background modeling, and rendering optimization.</li>
+                <li>Developed virtual try-on features for a fashion service by combining and evaluating multiple generative models.</li>
+                <li>Built an AI agent and its orchestration harness for a graph-based generative content platform.</li>
               </ul>
-            </article>
-            <article>
-              <p class="date">Mar. 2022 - Mar. 2024</p>
-              <h3>HUMAN Laboratory, KAIST</h3>
-              <p class="role">Graduate Researcher · Daejeon, Korea</p>
+            </div>
+          </article>
+          <article>
+            <p class="date">Mar 2022 — Mar 2024</p>
+            <div>
+              <h3>HUMAN Laboratory, KAIST <span class="role">Graduate Researcher · Daejeon</span></h3>
               <ul>
-                <li>Studied stereo matching and 3D perception in KAIST Mechanical Engineering.</li>
-                <li>Built foundations in LiDAR, camera calibration, sensor geometry, and multi-view perception.</li>
-                <li>Focused on robotics-relevant scene understanding from geometric sensing constraints.</li>
+                <li>Developed stereo vision-based measurement workflows for industrial-scale structures — camera calibration and image preprocessing for high-speed, high-precision 3D measurement.</li>
+                <li>Built automatic correspondence-point detection using feature keypoints, ROI separation, and co-visible region analysis.</li>
+                <li>Contributed signal-processing algorithms and CNN-based extensions for a compact optical 3D sensing platform.</li>
+                <li>Worked on RGB-D camera-array positioning and motion recognition for an XR ship-steering training system.</li>
               </ul>
-            </article>
-          </div>
+            </div>
+          </article>
         </div>
       </section>
 
+      <!-- PUBLICATIONS -->
+      <section id="publications" class="section">
+        <p class="eyebrow">— publications</p>
+        <h2>Papers and recognition</h2>
+        <div class="pub-list">
+          <article>
+            <p class="pub-venue">SPIE · MOEMS and Miniaturized Systems XXIII, 2024</p>
+            <h3>
+              <a href="https://doi.org/10.1117/12.3002065" target="_blank" rel="noreferrer">
+                A novel stereoscopic 3D motion measurement using bi-axial optical system
+                with one image sensor for remote machine health monitoring
+              </a>
+            </h3>
+            <p class="pub-authors">Jeongmin Kim, <strong>Dohyun Kim</strong>, Jin Kim, Yong-Hwa Park</p>
+          </article>
+          <article>
+            <p class="pub-venue">KSPE Autumn Conference, 2023</p>
+            <h3>Stereo matching technique for large-scale ship block using epipolar geometry</h3>
+            <p class="pub-authors"><strong>Dohyun Kim</strong></p>
+          </article>
+          <article class="award">
+            <p class="pub-venue">Award</p>
+            <h3>Excellence Award — KAIST NOVIC+ Thesis Festival, 2024</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
       <section id="education" class="section">
-        <div class="section-number">04</div>
-        <div class="section-body">
-          <div class="section-heading">
-            <p class="kicker">Education</p>
-            <h2>KAIST</h2>
-          </div>
-          <div class="timeline compact">
-            <article>
-              <p class="date">Mar. 2022 - Mar. 2024</p>
-              <h3>Master of Science, Mechanical Engineering</h3>
-              <p class="role">KAIST · Daejeon, Korea</p>
-              <ul>
-                <li>Graduate study in stereo matching, camera geometry, LiDAR, calibration, and 3D perception.</li>
-              </ul>
-            </article>
-            <article>
-              <p class="date">Mar. 2015 - Jun. 2021</p>
-              <h3>Bachelor of Science, Mechanical Engineering</h3>
-              <p class="role">Double Major in Electrical Engineering · KAIST</p>
-              <ul>
-                <li>Built engineering foundations across mechanical systems, electrical engineering, signals, controls, and computation.</li>
-              </ul>
-            </article>
-          </div>
+        <p class="eyebrow">— education</p>
+        <h2>KAIST</h2>
+        <div class="edu-grid">
+          <article>
+            <p class="date">2022 — 2024</p>
+            <h3>M.S. Mechanical Engineering</h3>
+            <p>
+              Stereo matching, camera geometry, and 3D perception.
+              Coursework: Visual Intelligence, Autonomous Mobile System,
+              Machine Learning for 3D Data.
+            </p>
+          </article>
+          <article>
+            <p class="date">2015 — 2021</p>
+            <h3>B.S. Mechanical Engineering</h3>
+            <p>
+              Double major in Electrical Engineering — mechanics, circuits,
+              signals, and control. The habit of thinking in systems.
+            </p>
+          </article>
         </div>
       </section>
 
-      <section id="contact" class="section contact-section">
-        <div class="section-number">05</div>
-        <div class="section-body">
-          <div class="section-heading">
-            <p class="kicker">Contact</p>
-            <h2>Let's connect</h2>
-          </div>
-          <div class="contact-grid">
-            <a href="mailto:kbh446688@gmail.com">
-              <span>Email</span>
-              <strong>kbh446688@gmail.com</strong>
-            </a>
-            <a href="https://www.linkedin.com/in/dohyun-kim-950bb429b/" target="_blank" rel="noreferrer">
-              <span>LinkedIn</span>
-              <strong>dohyun-kim-950bb429b</strong>
-            </a>
-            <a href="assets/DohyunKim-CV-2026-07-13-ai-researcher.pdf">
-              <span>CV</span>
-              <strong>Download PDF</strong>
-            </a>
-          </div>
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <p class="eyebrow">— contact</p>
+        <h2>Say hello</h2>
+        <div class="contact-grid">
+          <a href="mailto:kbh446688@gmail.com">
+            <span>Email</span>
+            <strong>kbh446688@gmail.com</strong>
+          </a>
+          <a href="https://github.com/DoHyun468" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <strong>DoHyun468</strong>
+          </a>
+          <a href="https://www.linkedin.com/in/dohyun-kim-950bb429b/" target="_blank" rel="noreferrer">
+            <span>LinkedIn</span>
+            <strong>dohyun-kim</strong>
+          </a>
+          <a href="assets/DohyunKim-CV.pdf">
+            <span>CV</span>
+            <strong>PDF ↗</strong>
+          </a>
         </div>
+        <p class="footer-note">Seoul, Korea · <span class="mono">T_world ← T_camera · x</span></p>
       </section>
     </main>
 
