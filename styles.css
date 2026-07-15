@@ -119,7 +119,7 @@ main {
 h1,
 h2 {
   font-family: var(--display);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--head);
   margin-top: 0;
 }
