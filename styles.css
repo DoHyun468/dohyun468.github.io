@@ -443,12 +443,13 @@ p {
 .timeline article::before {
   content: "";
   position: absolute;
-  top: 8px;
-  left: calc(-1 * clamp(34px, 5vw, 56px) - 0.5px);
-  width: 9px;
-  height: 9px;
+  box-sizing: content-box;
+  top: 3px;
+  left: calc(-1 * clamp(34px, 5vw, 56px) - 4px);
+  width: 8px;
+  height: 8px;
   background: var(--ink);
-  border: 2.5px solid var(--paper);
+  border: 6px solid var(--paper);
   transform: rotate(45deg);
   transition: transform 300ms ease, background 200ms ease;
 }
