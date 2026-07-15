@@ -200,18 +200,6 @@ p {
   text-decoration-color: var(--azure);
 }
 
-.plain-link {
-  color: var(--muted);
-  font-size: 14.5px;
-  text-decoration: none;
-  border-bottom: 1px solid var(--line);
-}
-
-.plain-link:hover {
-  color: var(--azure);
-  border-color: var(--azure);
-}
-
 /* hero photo */
 
 .hero-photo {
@@ -532,54 +520,6 @@ p {
   color: var(--muted);
 }
 
-/* ---------- publications ---------- */
-
-.pub-list {
-  display: grid;
-  gap: 26px;
-}
-
-.pub-list article {
-  border-left: 2px solid var(--azure);
-  padding-left: clamp(16px, 2.5vw, 26px);
-}
-
-.pub-list article.award {
-  border-left-color: var(--laser);
-}
-
-.pub-venue {
-  margin-bottom: 6px;
-  color: var(--muted);
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.pub-list h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
-  max-width: 72ch;
-}
-
-.pub-list h3 a {
-  text-decoration-color: var(--line);
-  text-underline-offset: 4px;
-}
-
-.pub-list h3 a:hover {
-  color: var(--azure);
-  text-decoration-color: var(--azure);
-}
-
-.pub-authors {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 /* ---------- contact ---------- */
 
 .contact-list h3 {
@@ -630,11 +570,6 @@ p {
   font-size: 13.5px;
 }
 
-.footer-note .mono {
-  font-family: var(--mono);
-  color: var(--azure);
-}
-
 /* ---------- responsive ---------- */
 
 @media (max-width: 900px) {
@@ -650,7 +585,6 @@ p {
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
 
   .ruler {
     grid-template-columns: repeat(2, minmax(0, 1fr));
