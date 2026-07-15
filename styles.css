@@ -85,7 +85,8 @@ a {
   text-decoration: none;
 }
 
-.site-header a:hover {
+.site-header a:hover,
+.site-header a.active {
   color: var(--azure);
 }
 
@@ -405,7 +406,7 @@ p {
   transform: rotate(45deg);
 }
 
-.timeline article.current::before {
+.timeline article:hover::before {
   background: var(--azure);
 }
 
@@ -420,7 +421,11 @@ p {
   font-weight: 500;
 }
 
-.timeline article.current .badge {
+.badge {
+  transition: background 140ms ease;
+}
+
+.timeline article:hover .badge {
   background: var(--azure);
 }
 
