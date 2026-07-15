@@ -563,39 +563,46 @@ p {
 
 /* ---------- contact ---------- */
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+.contact-list h3 {
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 400;
+  color: var(--head);
+  margin: 34px 0 8px;
 }
 
-.contact-grid a {
-  border: 1px solid var(--line);
-  padding: 22px;
-  min-height: 110px;
+.contact-list h3:first-child {
+  margin-top: 0;
+}
+
+.contact-mail {
+  color: var(--muted);
+  font-size: 15.5px;
   text-decoration: none;
-  transition: border-color 140ms ease, background 140ms ease;
 }
 
-.contact-grid a:hover {
-  border-color: var(--azure);
-  background: var(--azure-soft);
-}
-
-.contact-grid span {
-  display: block;
-  margin-bottom: 16px;
+.contact-mail:hover {
   color: var(--azure);
-  font-family: var(--sans);
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.contact-grid strong {
-  font-weight: 500;
-  overflow-wrap: anywhere;
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin: 4px 0 0;
+}
+
+.social-icons a {
+  color: #4a5158;
+}
+
+.social-icons a:hover {
+  color: var(--azure);
+}
+
+.social-icons svg {
+  display: block;
 }
 
 .footer-note {
@@ -625,8 +632,7 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .edu-grid,
-  .contact-grid {
+  .edu-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -641,7 +647,6 @@ p {
     justify-content: flex-start;
   }
 
-  .contact-grid,
   .project-grid {
     grid-template-columns: 1fr;
   }
