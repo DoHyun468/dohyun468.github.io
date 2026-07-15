@@ -429,10 +429,10 @@ p {
 .timeline::before {
   content: "";
   position: absolute;
-  top: 10px;
-  bottom: 6px;
+  top: -14px;
+  bottom: 0;
   left: 5px;
-  width: 1.5px;
+  width: 2px;
   background: var(--ink);
 }
 
@@ -443,17 +443,19 @@ p {
 .timeline article::before {
   content: "";
   position: absolute;
-  top: 7px;
-  left: calc(-1 * clamp(34px, 5vw, 56px) - 5.5px);
-  width: 13px;
-  height: 13px;
+  top: 8px;
+  left: calc(-1 * clamp(34px, 5vw, 56px) - 0.5px);
+  width: 9px;
+  height: 9px;
   background: var(--ink);
-  border: 3px solid var(--paper);
+  border: 2.5px solid var(--paper);
   transform: rotate(45deg);
+  transition: transform 300ms ease, background 200ms ease;
 }
 
 .timeline article:hover::before {
   background: var(--azure);
+  transform: rotate(135deg);
 }
 
 .badge {
