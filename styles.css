@@ -214,75 +214,6 @@ p {
   margin-left: auto;
 }
 
-/* ---------- ruler timeline (signature) ---------- */
-
-.ruler {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: clamp(56px, 8vw, 88px);
-  padding-top: 26px;
-}
-
-.ruler-line {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 12px;
-  border-top: 1.5px solid var(--ink);
-  background-image: repeating-linear-gradient(
-    90deg,
-    var(--ink) 0,
-    var(--ink) 1px,
-    transparent 1px,
-    transparent 10%
-  );
-  background-size: 100% 6px;
-  background-repeat: no-repeat;
-}
-
-.stop {
-  position: relative;
-  padding-top: 6px;
-}
-
-.stop .tick {
-  position: absolute;
-  top: -26px;
-  left: 1px;
-  width: 1.5px;
-  height: 18px;
-  background: var(--ink);
-}
-
-.stop.now .tick {
-  background: var(--laser);
-  width: 2.5px;
-}
-
-.stop .year {
-  display: block;
-  font-family: var(--mono);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--ink);
-}
-
-.stop.now .year {
-  color: var(--laser);
-}
-
-.stop .what {
-  display: block;
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.45;
-  max-width: 24ch;
-}
-
 /* ---------- projects ---------- */
 
 .project-grid {
@@ -586,10 +517,6 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .ruler {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 34px;
-  }
 }
 
 @media (max-width: 560px) {
@@ -601,15 +528,4 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .ruler {
-    grid-template-columns: 1fr;
-  }
-
-  .ruler-line {
-    display: none;
-  }
-
-  .stop .tick {
-    display: none;
-  }
 }
