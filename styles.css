@@ -244,6 +244,14 @@ p {
   height: auto;
 }
 
+.proj-art--photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 220 / 130;
+  height: auto;
+  object-fit: cover;
+}
+
 .art-ink {
   fill: none;
   stroke: var(--ink);
