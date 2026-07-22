@@ -65,9 +65,15 @@
       <section id="projects" class="section">
         <p class="eyebrow">01</p>
         <h2>Projects</h2>
+        <div class="proj-filters" aria-label="Project categories">
+          <button class="pf active" data-filter="all">All</button>
+          <button class="pf" data-filter="3d-vision">3D Vision</button>
+          <button class="pf" data-filter="robotics">Robotics</button>
+          <button class="pf" data-filter="ai">AI</button>
+        </div>
         <div class="project-grid">
 
-          <article class="proj" tabindex="0">
+          <article class="proj" tabindex="0" data-cat="3d-vision">
             <div class="proj-art proj-art--photo">
               <img src="assets/shipyard-measurement.jpg" alt="Stereo camera measurement setup between ship blocks at a shipyard — three tripod-mounted cameras and a checkerboard target">
             </div>
@@ -82,7 +88,7 @@
             </div>
           </article>
 
-          <article class="proj" tabindex="0">
+          <article class="proj" tabindex="0" data-cat="robotics">
             <div class="proj-art proj-art--photo">
               <img src="assets/ball-robot.jpg?v=2" alt="Ball-collecting robot NUNU — the built robot with its roller pick-up module, and the CAD design of the push-up drop-off mechanism">
             </div>
@@ -97,7 +103,7 @@
             </div>
           </article>
 
-          <article class="proj" tabindex="0">
+          <article class="proj" tabindex="0" data-cat="robotics">
             <div class="proj-art" aria-hidden="true">
               <svg viewBox="0 0 220 130">
                 <rect class="art-ink" x="66" y="30" width="88" height="56" rx="6"/>
@@ -117,7 +123,7 @@
             </div>
           </article>
 
-          <article class="proj" tabindex="0">
+          <article class="proj" tabindex="0" data-cat="3d-vision">
             <div class="proj-art" aria-hidden="true">
               <svg viewBox="0 0 220 130">
                 <ellipse class="art-azure" cx="96" cy="64" rx="22" ry="12" transform="rotate(-18 96 64)"/>
@@ -138,7 +144,7 @@
             </div>
           </article>
 
-          <article class="proj" tabindex="0">
+          <article class="proj" tabindex="0" data-cat="ai">
             <div class="proj-art" aria-hidden="true">
               <svg viewBox="0 0 220 130">
                 <circle class="art-ink" cx="56" cy="44" r="12"/>

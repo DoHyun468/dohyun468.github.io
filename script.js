@@ -22,3 +22,23 @@ if ("IntersectionObserver" in window && sections.length) {
   sections.forEach((section) => io.observe(section));
   setActive("about");
 }
+
+// Project category filter
+const filterButtons = document.querySelectorAll(".proj-filters .pf");
+const projCards = document.querySelectorAll(".project-grid .proj");
+
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach((b) => b.classList.toggle("active", b === btn));
+    const cat = btn.dataset.filter;
+    projCards.forEach((card) => {
+      const show = cat === "all" || card.dataset.cat === cat;
+      card.classList.toggle("is-hidden", !show);
+      card.classList.remove("is-shown");
+      if (show) {
+        void card.offsetWidth; // restart animation
+        card.classList.add("is-shown");
+      }
+    });
+  });
+});

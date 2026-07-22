@@ -216,10 +216,54 @@ p {
 
 /* ---------- projects ---------- */
 
+.proj-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 26px;
+  margin: 6px 0 30px;
+}
+
+.pf {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 5px 10px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted, #6b7683);
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.pf:hover {
+  color: var(--ink, #1f2933);
+}
+
+.pf.active {
+  background: rgba(43, 93, 168, 1);
+  color: #fff;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(16px, 2.5vw, 26px);
+}
+
+.proj.is-hidden {
+  display: none;
+}
+
+.proj.is-shown {
+  animation: projIn 0.35s ease both;
+}
+
+@keyframes projIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
 }
 
 .proj {
