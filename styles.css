@@ -248,9 +248,13 @@ p {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.5vw, 26px);
+  column-count: 3;
+  column-gap: clamp(16px, 2.5vw, 26px);
+}
+
+.project-grid .proj {
+  break-inside: avoid;
+  margin-bottom: clamp(16px, 2.5vw, 26px);
 }
 
 .proj.is-hidden {
@@ -291,9 +295,7 @@ p {
 .proj-art--photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 220 / 130;
   height: auto;
-  object-fit: cover;
 }
 
 .art-ink {
@@ -592,7 +594,7 @@ p {
   }
 
   .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-count: 2;
   }
 
 }
@@ -603,7 +605,7 @@ p {
   }
 
   .project-grid {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
 
 }
