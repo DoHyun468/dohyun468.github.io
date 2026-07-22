@@ -42,3 +42,8 @@ filterButtons.forEach((btn) => {
     });
   });
 });
+
+// Tap/click toggles the project overlay (for touch devices)
+projCards.forEach((card) => {
+  card.addEventListener("click", () => card.classList.toggle("is-open"));
+});
