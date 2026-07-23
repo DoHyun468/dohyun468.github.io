@@ -204,6 +204,7 @@ p {
 
 .hero-photo {
   margin: 0;
+  margin-top: 10px; /* optically align photo top with the first text line */
 }
 
 .hero-photo img {
