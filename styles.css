@@ -292,7 +292,8 @@ p {
   height: auto;
 }
 
-.proj-art--photo img {
+.proj-art--photo img,
+.proj-art--photo video {
   display: block;
   width: 100%;
   height: auto;

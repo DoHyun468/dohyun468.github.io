@@ -47,3 +47,9 @@ filterButtons.forEach((btn) => {
 projCards.forEach((card) => {
   card.addEventListener("click", () => card.classList.toggle("is-open"));
 });
+
+// Ensure muted card videos autoplay (retry once on first interaction if blocked)
+const cardVideos = document.querySelectorAll(".proj-art video[autoplay]");
+const playCardVideos = () => cardVideos.forEach((v) => v.play().catch(() => {}));
+playCardVideos();
+window.addEventListener("pointerdown", playCardVideos, { once: true });
