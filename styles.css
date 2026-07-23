@@ -204,7 +204,7 @@ p {
 
 .hero-photo {
   margin: 0;
-  margin-top: 10px; /* optically align photo top with the first text line */
+  margin-top: -95px; /* raise photo to sit level with the About me heading */
 }
 
 .hero-photo img {
@@ -597,6 +597,10 @@ p {
 @media (max-width: 900px) {
   .hero-columns {
     grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    margin-top: 0;
   }
 
   .hero-photo img {
